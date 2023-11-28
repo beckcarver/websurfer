@@ -35,7 +35,6 @@ app.use((err, req, res, next) =>
     res.render('500')
 })
 
-// start express server on port 5000
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
