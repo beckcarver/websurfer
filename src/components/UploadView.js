@@ -21,7 +21,7 @@ export default function UploadView(
             <div className="window-body">
                 <div className="field-row" style={{ justifyContent: "right" }}>
                     <button onClick={()=>setForm(true)}>Upload</button>
-                    {form == true && <UploadForm score={score} closeForm={(b) => setForm(b)} />}
+                    {form===true && <UploadForm score={score} closeForm={(b) => setForm(b)} />}
                 </div>
             </div>
         </div>
