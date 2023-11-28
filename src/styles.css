@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("./public/clouds.jpeg");
+    background-repeat: repeat;
+}
+
+form {
+    height: 2vh;
+    width: 100%;
+    text-align: center;
+}
+
+form.wikiForm {
+    padding-bottom: 20px;
+}
+
+.header {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    grid-area: header;
+    background-image: url("./public/stary90s.gif");
+    background-repeat: repeat;
+    padding: 5px;
+    text-align: center;
+}
+
+.header > h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgb(246, 202, 26), rgb(246, 110, 26));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: blur(1.5px);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header  header'
+        'left middle middle'
+        'footer footer footer';
+    grid-template-columns: 25% 55% 20%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    overflow-wrap: break-word;
+}
+
+.left,
+.middle {
+    padding: 10px 10px 10px 10px;
+    min-height: 50vmax;
+    overflow-wrap: break-word;
+}
+
+.left {
+    grid-area: left;
+}
+
+.left.questionText {
+    text-align: center;
+}
+
+.middle {
+    grid-area: middle;
+    padding-right: 1%;
+}
+
+.footer {
+    grid-area: footer;
+    background-image: url("./public/stary90s.gif");
+    background-repeat: repeat;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+/* Makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .grid-container {
+        grid-template-areas:
+            'header header header'
+            'left left left'
+            'middle middle middle'
+            'footer footer footer';
+    }
+}
