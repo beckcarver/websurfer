@@ -16,7 +16,7 @@
   "scripts": {
     "start-client": "react-scripts start",
     "build": "CI=false && react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
     "start": "npm run build && (cd server && npm start)"
   },
