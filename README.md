@@ -7,4 +7,5 @@
 * In primary package.json remove "CI=false &&" to run locally, this is set for Azure
 * Otherwise on root directory run npm start
 * Commits to code cause Azure to recompile
+* hosted at websurfer.azurewebsites.net (on free tier so likely not live, should boot in ~5 min after requesting to connect)
 
